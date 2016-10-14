@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banks</title>
+</head>
+<body>
+<button onclick="goBack()">Go Back</button>
+    <h4>Branch Details:</h4>
+   <div id="branch_details">
+       {%for branch in branches%}
+        IFSC :   {{branch.ifsc}}<br/>
+        Bank : {{branch.bank}}<br/>
+        Address : {{branch.address}}<br/>
+        Branch : {{branch.branch}}<br/>
+        State : {{branch.state}}<br/>
+        <br/>
+        {%endfor%}
+    </div>
+
+
+    <script>
+function goBack() {
+    window.history.back();
+
+}
+</script>
+
+</body>
+</html>
